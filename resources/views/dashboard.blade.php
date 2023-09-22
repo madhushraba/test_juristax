@@ -5,35 +5,41 @@
         </h2>
     </x-slot> --}}
 
-   
-<!DOCTYPE html>
-<html lang="en">
+
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content=                                                                                                                                                                       "" />
+        <meta name="description" content="" />
         <meta name="author" content="" />
         <title>madhushraba21</title>
-        <link href="{{asset('backend')}}/css/styles.css" rel="stylesheet" />
+        <link href="{{ asset('backend') }}/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-white !no-underline !decoration-5 text-[22px]">
-                    {{ __('Dashboard ') }}
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
+                    class="text-white !no-underline !decoration-5 text-[22px]">
+                    {{ ('Dashboard 123') }}
                 </x-nav-link>
             </div>
             {{-- <a class="navbar-brand ps-3" href="index.html">Admin Panel</a> --}}
             <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                    class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i
+                            class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
@@ -41,28 +47,32 @@
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                 <div>{{ Auth::user()->name }}</div>
-    
+
                                 <div class="ml-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                 </div>
                             </button>
                         </x-slot>
-    
+
                         <x-slot name="content">
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile ') }}
                             </x-dropdown-link>
-    
+
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-    
+
                                 <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
+                                    onclick="event.preventDefault();
                                                     this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
@@ -82,41 +92,55 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Profits
+                            </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Layouts
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Static Navigation</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            </a> --}}
+                            {{-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                                data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                        aria-controls="pagesCollapseAuth">
                                         Authentication
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Login</a>
                                             <a class="nav-link" href="register.html">Register</a>
                                             <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                        aria-controls="pagesCollapseError">
                                         Error
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                                        data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="401.html">401 Page</a>
                                             <a class="nav-link" href="404.html">404 Page</a>
@@ -124,8 +148,8 @@
                                         </nav>
                                     </div>
                                 </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            </div> --}}
+                            {{-- <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
@@ -133,7 +157,7 @@
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -179,9 +203,11 @@
                 </footer>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+        </script>
         <script src="js/scripts.js"></script>
     </body>
-</html>
+
+    </html>
 
 </x-app-layout>

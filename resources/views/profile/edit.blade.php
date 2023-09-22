@@ -7,7 +7,7 @@
             <x-nav-link 
             h2
             :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-rose-800  " >
-               <h2> {{ __('Dashboard ') }}</h2>
+               <h2> {{ __(' <- Dashboard ') }}</h2>
             </x-nav-link>
         </div>
     </x-slot>
