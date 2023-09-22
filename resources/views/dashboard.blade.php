@@ -21,31 +21,32 @@
     </head>
 
     <body>
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between">
             <!-- Navbar Brand-->
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+            <div class="hidden sm:-my-px sm:ml-10 sm:flex ">
                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                    class="text-white !no-underline !decoration-5 text-[22px]">
-                    {{ 'Dashboard 123' }}
+                    class="text-white !no-underline !decoration-5 text-[22px]"  style="text-decoration: none; border: none;">
+                    <div class="ss" style="padding: 12px o; color:pink; font-weight:900; font-size: 1.5rem; ">{{ 'Admin Panel' }}</div>
                 </x-nav-link>
+                {{-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 !bg-[#FFC0CB]" id="sidebarToggle" href="#!"><i
+                    class="fas fa-bars"></i></button> --}}
             </div>
             {{-- <a class="navbar-brand ps-3" href="index.html">Admin Panel</a> --}}
             <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                    class="fas fa-bars"></i></button>
+           
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            {{-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
                         aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i
                             class="fas fa-search"></i></button>
                 </div>
-            </form>
+            </form> --}}
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    <x-dropdown align="right" width="48">
+                    <x-dropdown align="right" width="48" >
                         <x-slot name="trigger">
                             <button
                                 class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
@@ -88,16 +89,17 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            {{-- <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i>
                                     Dashboard
-                                    <x-nav-link :href="route('home')" :active="request()->routeIs('dashboard')" class="text-white  "
-                                        style="text-decoration: none; border: none;">
-                                        <div class="danger " style="padding: 12px; color:pink;"> <i
-                                                class="fas fa-home"></i> {{ 'Home' }}</div>
-                                    </x-nav-link>
+                                    
                                 </div>
-                            </a>
+                            </a> --}}
+                            <x-nav-link :href="route('home')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                style="text-decoration: none; border: none;">
+                                <div class="danger " style="padding: 12px; color:pink;"> <i
+                                        class="fas fa-home"></i> {{ 'Home' }}</div>
+                            </x-nav-link>
                             {{-- <a class="nav-link text-rose-800" :href="route('page1')">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Profits --}}
@@ -110,7 +112,7 @@
                             </x-nav-link>
 
                             {{-- </a> --}}
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            {{-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -124,13 +126,13 @@
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div>
-                            {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a> --}}
-                            {{-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -162,8 +164,8 @@
                                         </nav>
                                     </div>
                                 </nav>
-                            </div> --}}
-                            {{-- <div class="sb-sidenav-menu-heading">Addons</div>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
@@ -175,8 +177,8 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small" style="padding: 2px 12px; color:pink;">Logged in as:</div>
+                     <span style="padding: 12px; color:pink;"> @madhushraba</span> 
                     </div>
                 </nav>
             </div>
