@@ -26,7 +26,7 @@
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
                     class="text-white !no-underline !decoration-5 text-[22px]">
-                    {{ ('Dashboard 123') }}
+                    {{ 'Dashboard 123' }}
                 </x-nav-link>
             </div>
             {{-- <a class="navbar-brand ps-3" href="index.html">Admin Panel</a> --}}
@@ -89,13 +89,27 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i>
+                                    Dashboard
+                                    <x-nav-link :href="route('home')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                        style="text-decoration: none; border: none;">
+                                        <div class="danger " style="padding: 12px; color:pink;"> <i
+                                                class="fas fa-home"></i> {{ 'Home' }}</div>
+                                    </x-nav-link>
+                                </div>
                             </a>
-                            <a class="nav-link" href="index.html">
+                            {{-- <a class="nav-link text-rose-800" :href="route('page1')">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Profits
-                            </a>
+                                Profits --}}
+                            <x-nav-link :href="route('page1')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                style="text-decoration: none; border: none; ">
+                                <div class="danger " style="padding: 12px; color:pink;"> <i
+                                        class="fas fa-chart-area"></i>
+                                    {{ 'Profits 123' }}
+                                </div>
+                            </x-nav-link>
+
+                            {{-- </a> --}}
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
