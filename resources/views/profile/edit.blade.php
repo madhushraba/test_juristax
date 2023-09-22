@@ -1,8 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Profile') }}
-        </h2>
+        {{-- <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Profile fgvf') }}
+        </h2> --}}
+        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+            <x-nav-link 
+            h2
+            :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-rose-800  " >
+               <h2> {{ __('Dashboard ') }}</h2>
+            </x-nav-link>
+        </div>
     </x-slot>
 
     <div class="py-12">
