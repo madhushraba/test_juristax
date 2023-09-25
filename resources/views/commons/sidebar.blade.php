@@ -76,8 +76,18 @@
                                             <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                                                 data-bs-parent="#sidenavAccordionPages">
                                                 <nav class="sb-sidenav-menu-nested nav">
-                                                    <a class="nav-link" href="login.html">List</a>
-                                                    <a class="nav-link" href="register.html">Add category</a>
+                                                    <x-nav-link :href="route('catlist')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                                        style="text-decoration: none; border: none; ">
+                                                        <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                                                            {{ 'List' }}
+                                                        </div>
+                                                    </x-nav-link>
+                                                    <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                                        style="text-decoration: none; border: none; ">
+                                                        <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                                                            {{ 'Add category' }}
+                                                        </div>
+                                                    </x-nav-link>
                                                 </nav>
                                             </div>
             
@@ -106,6 +116,19 @@
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
                         {{ 'Users' }}
+                    </div>
+                </x-nav-link>
+
+                <x-nav-link :href="route('testimonial')" :active="request()->routeIs('dashboard')" class="text-white  "
+                    style="text-decoration: none; border: none; ">
+                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                        {{ 'Testimonial' }}
+                    </div>
+                </x-nav-link>
+                <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
+                    style="text-decoration: none; border: none; ">
+                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                        {{ 'Contact Form' }}
                     </div>
                 </x-nav-link>
 

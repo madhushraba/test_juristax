@@ -38,7 +38,21 @@ public function home()
 {
     return view('pages.Home');
 }
-
-   
+public function catlist()
+{
+    return view('pages.Catlist');
+}
+public function contactform()
+{
+    return view('pages.Contactform');
+}
+public function testimonial()
+{
+    return view('pages.Testimonial');
+}
+public function addcat()
+{
+    return view('pages.Addcat');
+}
     
 }

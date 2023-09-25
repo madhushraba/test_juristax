@@ -44,6 +44,13 @@ Route::get('/users', [RouteController::class, 'users'])->name('users');
 
 Route::get('/home', [RouteController::class, 'home'])->name('home');
 
+Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');
+
+
+Route::get('/contactform', [RouteController::class, 'contactform'])->name('contactform');
+
+Route::get('/testimonial', [RouteController::class, 'testimonial'])->name('testimonial');
+Route::get('/addcat', [RouteController::class, 'addcat'])->name('addcat');
 
 
 
