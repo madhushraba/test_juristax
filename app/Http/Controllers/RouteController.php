@@ -24,9 +24,19 @@ public function page2()
 {
     return view('pages.Page2');
 }
+
+public function page3()
+{
+    return view('pages.page3');
+}
+
 public function users()
 {
     return view('pages.Users');
+}
+public function home()
+{
+    return view('pages.Home');
 }
 
    

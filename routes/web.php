@@ -38,8 +38,11 @@ require __DIR__.'/auth.php';
 // Route::get('/page1', 'RouteController@index')->name('page1');
 Route::get('/page1', [RouteController::class, 'index'])->name('page1');
 Route::get('/page2', [RouteController::class, 'page2'])->name('page2');
+Route::get('/page3', [RouteController::class, 'page3'])->name('page3');
 
 Route::get('/users', [RouteController::class, 'users'])->name('users');
+
+Route::get('/home', [RouteController::class, 'home'])->name('home');
 
 
 
