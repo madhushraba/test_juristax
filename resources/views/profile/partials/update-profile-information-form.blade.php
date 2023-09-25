@@ -47,6 +47,22 @@
             @endif
         </div>
 
+
+
+        <div>
+            <x-input-label for="contact" :value="__('Contact')" />
+            <x-text-input id="contact" name="contact" type="text" class="mt-1 block w-full" :value="old('contact', $user->contact)" required autofocus autocomplete="contact" />
+            <x-input-error class="mt-2" :messages="$errors->get('contact')" />
+        </div>
+
+        <div>
+            <x-input-label for="displaypic" :value="__('Upload Picture')" />
+            <x-text-input id="displaypic" name="displaypic" type="file" class="mt-1 block w-full" :value="old('displaypic', $user->displaypic)" required autofocus autocomplete="displaypic" />
+            <x-input-error class="mt-2" :messages="$errors->get('displaypic')" />
+        </div>
+
+
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 

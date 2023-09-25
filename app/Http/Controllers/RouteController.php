@@ -9,14 +9,25 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
-class ProfileController extends Controller
+class RouteController extends Controller
 {
    
-    public function view1(): View
-    {
-        return view('pages.Page1');
-    }
-
+    // public function view1(): View
+    // {
+    //     return view('pages.Page1');
+    // }
+    public function index()
+{
+    return view('pages.Page1');
+}
+public function page2()
+{
+    return view('pages.Page2');
+}
+public function users()
+{
+    return view('pages.Users');
+}
 
    
     
