@@ -17,10 +17,10 @@
 
 
 <body>
-    
+
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion"
         style="height:100%; border-top: 1px solid #e01638;">
-        <div class="sb-sidenav-menu"  style=" height: 82vh; position: sticky;">
+        <div class="sb-sidenav-menu" style=" height: 82vh; position: sticky;">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
 
@@ -57,11 +57,12 @@
                         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                             <div class="sb-sidenav-menu">
                                 <div class="nav">
-            
+
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                        data-bs-target="#collapsePages" aria-expanded="false"
+                                        aria-controls="collapsePages" style="padding: 12px; color:pink;">
                                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                        Category Management 
+                                        Category Management
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
@@ -71,34 +72,38 @@
                                                 data-bs-target="#pagesCollapseAuth" aria-expanded="false"
                                                 aria-controls="pagesCollapseAuth">
                                                 view more
-                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i>
+                                                </div>
                                             </a>
                                             <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                                                 data-bs-parent="#sidenavAccordionPages">
                                                 <nav class="sb-sidenav-menu-nested nav">
                                                     <x-nav-link :href="route('catlist')" :active="request()->routeIs('dashboard')" class="text-white  "
                                                         style="text-decoration: none; border: none; ">
-                                                        <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                                                        <div class="danger " style="padding: 12px; color:pink;"> <i
+                                                                class="fas fa-chart-area"></i>
                                                             {{ 'List' }}
                                                         </div>
                                                     </x-nav-link>
-                                                    <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                                    <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')"
+                                                        class="text-white  "
                                                         style="text-decoration: none; border: none; ">
-                                                        <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                                                        <div class="danger " style="padding: 12px; color:pink;"> <i
+                                                                class="fas fa-chart-area"></i>
                                                             {{ 'Add category' }}
                                                         </div>
                                                     </x-nav-link>
                                                 </nav>
                                             </div>
-            
+
                                         </nav>
                                     </div>
-            
+
                                 </div>
-            
+
                         </nav>
                     </div>
-                    
+
                 </div>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
                 </script>
@@ -140,8 +145,9 @@
         </div>
     </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
-<script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>
