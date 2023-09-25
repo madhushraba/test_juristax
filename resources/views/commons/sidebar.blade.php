@@ -56,7 +56,7 @@
                     <div id="layoutSidenav_nav">
                         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                             <div class="sb-sidenav-menu">
-                                <div class="nav">
+                                <div class="nav ">
 
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                         data-bs-target="#collapsePages" aria-expanded="false"
