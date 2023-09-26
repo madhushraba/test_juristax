@@ -36,13 +36,19 @@
                         {{ ' Page 1' }}
                     </div>
                 </x-nav-link>
-                <x-nav-link :href="route('page2')" :active="request()->routeIs('dashboard')" class="text-white  "
+                <x-nav-link :href="route('store.enquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
                         {{ 'Enquiry Management' }}
                     </div>
                 </x-nav-link>
-                <x-nav-link :href="route('page2')" :active="request()->routeIs('dashboard')" class="text-white  "
+                <x-nav-link :href="route('showenquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
+                    style="text-decoration: none; border: none; ">
+                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
+                        {{ ' Showw Enquiries' }}
+                    </div>
+                </x-nav-link>
+                <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
                         {{ 'Contact user table' }}
@@ -56,7 +62,7 @@
                     <div id="layoutSidenav_nav">
                         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                             <div class="sb-sidenav-menu">
-                                <div class="nav ">
+                                {{-- <div class="nav ">
 
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                         data-bs-target="#collapsePages" aria-expanded="false"
@@ -99,7 +105,37 @@
                                         </nav>
                                     </div>
 
+                                </div> --}}
+                                <div class="nav ">
+                                    <a class="nav-link" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseCategory" aria-expanded="false"
+                                        aria-controls="collapseCategory" style="padding: 12px; color:pink;">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                        Category Management
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseCategory">
+                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                            <x-nav-link :href="route('catlist')" :active="request()->routeIs('dashboard')" class="text-white  "
+                                                style="text-decoration: none; border: none; ">
+                                                <div class="danger " style="padding: 12px; color:pink;"> <i
+                                                        class="fas fa-chart-area"></i>
+                                                    {{ 'List' }}
+                                                </div>
+                                            </x-nav-link>
+                                            <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')"
+                                                class="text-white  "
+                                                style="text-decoration: none; border: none; ">
+                                                <div class="danger " style="padding: 12px; color:pink;"> <i
+                                                        class="fas fa-chart-area"></i>
+                                                    {{ 'Add category' }}
+                                                </div>
+                                            </x-nav-link>
+                                        </nav>
+                                    </div>
                                 </div>
+                                
+                                
 
                         </nav>
                     </div>
@@ -130,12 +166,12 @@
                         {{ 'Testimonial' }}
                     </div>
                 </x-nav-link>
-                <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
+                {{-- <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
                         {{ 'Contact Form' }}
                     </div>
-                </x-nav-link>
+                </x-nav-link> --}}
 
             </div>
         </div>

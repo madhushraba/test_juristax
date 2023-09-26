@@ -14,7 +14,9 @@
             {{-- @foreach ($users as $user) --}}
             <tr>
                 <td>{{ Auth::user()->id}}</td>
-                <td>{{ Auth::user()->name }}</td>
+                <td>@auth
+                                <div>{{ Auth::user()->name }}</div>
+                            @endauth</td>
                 {{-- <td>{{ $user->name }}</td> --}}
                 {{-- <td>{{ $user->email }}</td> --}}
             </tr>
