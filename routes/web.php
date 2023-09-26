@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserEnquiryController;
 use Illuminate\Support\Facades\Route;
  
@@ -19,8 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php'; 
-Route::get('/page1', [RouteController::class, 'index'])->name('page1');
+require __DIR__.'/auth.php';  
 Route::get('/page2', [RouteController::class, 'page2'])->name('page2');
 Route::get('/page3', [RouteController::class, 'page3'])->name('page3');
 
@@ -28,7 +28,7 @@ Route::get('/users', [RouteController::class, 'users'])->name('users');
 
 Route::get('/home', [RouteController::class, 'home'])->name('home');
 
-Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');
+// Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');
 
 
 Route::get('/contactform', [RouteController::class, 'contactform'])->name('contactform');
@@ -39,9 +39,9 @@ Route::get('/testimonial', [RouteController::class, 'testimonial'])->name('testi
 // Route::post('/addcat', [RouteController::class, 'storeCategory'])->name('storeCategory');
 // Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');
 
-Route::get('/addcat', [RouteController::class, 'createCategory'])->name('addcat');
-Route::post('/addcat', [RouteController::class, 'storeCategory'])->name('storeCategory');
-Route::get('/showAddCat', [RouteController::class, 'showCategory'])->name('showAddCat');
+Route::get('/addcat', [CategoryController::class, 'index'])->name('addcat');
+Route::post('/addcat', [CategoryController::class, 'store'])->name('storeCategory');
+Route::get('/catlist', [CategoryController::class, 'show'])->name('catlist');
 
 
 

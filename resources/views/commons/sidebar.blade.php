@@ -30,12 +30,7 @@
                         {{ 'Home' }}</div>
                 </x-nav-link>
 
-                <x-nav-link :href="route('page1')" :active="request()->routeIs('dashboard')" class="text-white  "
-                    style="text-decoration: none; border: none; ">
-                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
-                        {{ ' Page 1' }}
-                    </div>
-                </x-nav-link>
+             
                 <x-nav-link :href="route('store.enquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
@@ -45,9 +40,10 @@
                 <x-nav-link :href="route('showenquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>
-                        {{ ' Showw Enquiries' }}
+                        {{ ' Show Enquiries' }}
                     </div>
                 </x-nav-link>
+                 
                 <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fas fa-chart-area"></i>

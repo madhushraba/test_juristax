@@ -1,19 +1,21 @@
 @extends('dashboard')
-@section('content')
+@section('content') 
 <div class="container">
     <h1>Category List</h1>
-    <table class="table">
+    <table   id="dataTable" class="table">
         <thead>
             <tr>
-                <th>Category</th>
-            </tr>
+                {{-- <td>{{ $category->name }}</td> --}}
+                <td>hello</td>
+            </tr> 
         </thead>
         <tbody>
-            @foreach($categories as $category)
+            {{-- @foreach($categories as $category) --}}
             <tr>
-                <td>{{ $category->name }}</td>
+                {{-- <td>{{ $category->name }}</td> --}}
+                <td>438597</td>
             </tr>
-            @endforeach
+            {{-- @endforeach --}}
         </tbody>
     </table>
 </div>
