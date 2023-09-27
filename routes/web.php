@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;  
 use App\Http\Controllers\UserEnquiryController;
 use Illuminate\Support\Facades\Route;
  
@@ -31,7 +32,9 @@ Route::get('/home', [RouteController::class, 'home'])->name('home');
 // Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');
 
 
-Route::get('/contactform', [RouteController::class, 'contactform'])->name('contactform');
+Route::get('/contactform', [ContactController::class, 'contactform'])->name('contactform'); 
+Route::post('/contactform', [ContactController::class, 'store'])->name('contactform'); 
+Route::get('/contacttable', [ContactController::class, 'contacttable'])->name('contact_table');
 
 Route::get('/testimonial', [RouteController::class, 'testimonial'])->name('testimonial');
  

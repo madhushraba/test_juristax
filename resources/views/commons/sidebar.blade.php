@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +11,7 @@
     <link href="{{ asset('backend') }}/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion"
@@ -24,26 +26,26 @@
                         {{ 'Home' }}</div>
                 </x-nav-link>
 
-              
 
-                <!-- Category Management -->
-                <a class="nav-link" href="#" data-bs-toggle="collapse"
-                    data-bs-target="#collapseCategory" aria-expanded="false"
-                    aria-controls="collapseCategory" style="padding: 12px; color:pink;">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-bars"></i></div>
+ 
+                <!-- Category Management Dropdown -->
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory"
+                    aria-expanded="false" aria-controls="collapseCategory" style="padding: 12px; color:pink;">
+                    <div class="sb-nav-link-icon" style="padding: 12px; color:pink;"><i class="fa-solid fa-bars"></i>
+                    </div>
                     Category Management
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseCategory">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionCategory">
                         <x-nav-link :href="route('catlist')" :active="request()->routeIs('dashboard')" class="text-white  "
                             style="text-decoration: none; border: none; ">
-                            <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-table-list"></i>
+                            <div class="danger " style="padding: 12px; color:pink;"> <i
+                                    class="fa-solid fa-table-list"></i>
                                 {{ 'Category List' }}
                             </div>
                         </x-nav-link>
-                        <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')"
-                            class="text-white  "
+                        <x-nav-link :href="route('addcat')" :active="request()->routeIs('dashboard')" class="text-white  "
                             style="text-decoration: none; border: none; ">
                             <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-plus"></i>
                                 {{ 'Add category' }}
@@ -52,31 +54,48 @@
                     </nav>
                 </div>
 
-                <!-- Other Menu Items -->
-                <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
+                <!-- Enquiry Management Dropdown -->
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEnquiry"
+                    aria-expanded="false" aria-controls="collapseEnquiry" style="padding: 12px; color:pink;">
+                    <div class="sb-nav-link-icon" style="padding: 12px; color:pink;"><i class="fa-solid fa-bars"></i>
+                    </div>
+                    Enquiry Management
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseEnquiry">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionEnquiry">
+                        <x-nav-link :href="route('store.enquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
+                            style="text-decoration: none; border: none; ">
+                            <div class="danger " style="padding: 12px; color:pink;"> <i
+                                    class="fa-solid fa-table-list"></i>
+                                {{ 'Enquiry Management' }}
+                            </div>
+                        </x-nav-link>
+                        <x-nav-link :href="route('showenquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
+                            style="text-decoration: none; border: none; ">
+                            <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-plus"></i>
+                                {{ 'Show Enquiries' }}
+                            </div>
+                        </x-nav-link>
+                    </nav>
+                </div>
+
+                {{-- ======================================================== --}}
+
+                {{-- <x-nav-link :href="route('contactform')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
                     <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-id-badge"></i>
-                        {{ 'Contact user table' }}
+                        {{ 'Contact user form' }}
                     </div>
-                </x-nav-link>
-                <x-nav-link :href="route('store.enquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
+                </x-nav-link> --}}
+
+                {{-- enquiry================================================= --}}
+
+                <!-- Other Menu Items -->
+                <x-nav-link :href="route('contact_table')" :active="request()->routeIs('dashboard')" class="text-white  "
                     style="text-decoration: none; border: none; ">
-                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-plus"></i>
-                        {{ 'Enquiry Management' }}
-                    </div>
-                </x-nav-link>
-                <x-nav-link :href="route('showenquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
-                    style="text-decoration: none; border: none; ">
-                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-table-list"></i>
-                        {{ ' Show Enquiries' }}
-                    </div>
-                </x-nav-link>
-                 
-              
-                <x-nav-link :href="route('users')" :active="request()->routeIs('dashboard')" class="text-white  "
-                    style="text-decoration: none; border: none; ">
-                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-user-plus"></i>
-                        {{ 'Users' }}
+                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-id-badge"></i>
+                        {{ 'Contacted user table' }}
                     </div>
                 </x-nav-link>
 
@@ -95,7 +114,9 @@
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

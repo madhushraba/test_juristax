@@ -41,10 +41,7 @@ class RouteController extends Controller
         return view('pages.Home');
     }
 
-    public function contactform()
-    {
-        return view('pages.Contactform');
-    }
+
     public function testimonial()
     {
         return view('pages.Testimonial');
