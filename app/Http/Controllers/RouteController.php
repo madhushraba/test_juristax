@@ -18,19 +18,12 @@ class RouteController extends Controller
     // {
     //     return view('pages.Page1');
     // }
-    public function index()
-    {
-        return view('pages.Page1');
-    }
-    public function page2()
-    {
-        return view('pages.Page2');
-    }
-
-    public function page3()
-    {
-        return view('pages.page3');
-    }
+    // public function index()
+    // {
+    //     return view('pages.Page1');
+    // }
+   
+  
 
     public function users()
     {

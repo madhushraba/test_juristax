@@ -42,10 +42,6 @@ class CategoryController extends Controller
         return view('pages.Addcat', ['categories' => $categories]);
     }
 
-    public function create()
-    {
-        return view('pages.Addcat');
-    }
 
     public function store(Request $request)
     { 
@@ -55,17 +51,17 @@ class CategoryController extends Controller
         Category::create($validatedData); 
         return redirect()->back()->with('success', 'Category added successfully');
     }
-
-
-
-
-    public function show()
+  public function show()
     {
         $categories = Category::all();
     
         return view('pages.Catlist', ['categories' => $categories]);
     }
 
+    public function create()
+    {
+        return view('pages.Addcat');
+    }
     // public function edit(Category $category)
     // {
     //     return view('categories.edit', ['category' => $category]);

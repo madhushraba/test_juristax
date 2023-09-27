@@ -32,7 +32,7 @@
                 <tbody>
                     @foreach($categories as $category)
                     <tr>
-                        <td>23</td>
+                        <td>{{$category->id}}</td>
                         <td>{{ $category->name }}</td> 
                     </tr>
                     @endforeach

@@ -67,13 +67,13 @@
                         <x-nav-link :href="route('store.enquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
                             style="text-decoration: none; border: none; ">
                             <div class="danger " style="padding: 12px; color:pink;"> <i
-                                    class="fa-solid fa-table-list"></i>
-                                {{ 'Enquiry Management' }}
+                                    class="fa-solid fa-plus"></i>
+                                {{ 'Enquiry Add' }}
                             </div>
                         </x-nav-link>
                         <x-nav-link :href="route('showenquiry')" :active="request()->routeIs('dashboard')" class="text-white  "
                             style="text-decoration: none; border: none; ">
-                            <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-plus"></i>
+                            <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-table-list"></i>
                                 {{ 'Show Enquiries' }}
                             </div>
                         </x-nav-link>
@@ -98,13 +98,44 @@
                         {{ 'Contacted user table' }}
                     </div>
                 </x-nav-link>
+                {{-- ========================================================== --}}
 
-                <x-nav-link :href="route('testimonial')" :active="request()->routeIs('dashboard')" class="text-white  "
-                    style="text-decoration: none; border: none; ">
-                    <div class="danger " style="padding: 12px; color:pink;"> <i class="fa-solid fa-square-check"></i>
-                        {{ 'Testimonial' }}
-                    </div>
-                </x-nav-link>
+
+                
+
+
+
+              <!-- ... Your existing code ... -->
+
+<!-- Testimonial Management -->
+<a class="nav-link" href="#" data-bs-toggle="collapse"
+data-bs-target="#collapseTestimonial" aria-expanded="false"
+aria-controls="collapseTestimonial" style="padding: 12px; color:pink;">
+<div class="sb-nav-link-icon"><i class="fa-solid fa-bars"></i></div>
+Testimonial Management
+<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<div class="collapse" id="collapseTestimonial">
+<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionTestimonial">
+    <x-nav-link :href="route('testimonial')" :active="request()->routeIs('dashboard')" class="text-white  "
+        style="text-decoration: none; border: none; ">
+        <div class="danger " style="padding: 12px; color:pink;"> <i
+                class="fa-solid fa-plus"></i>
+            {{ 'Add Testimonial' }}
+        </div>
+    </x-nav-link>
+    <x-nav-link :href="route('show_testimonial')" :active="request()->routeIs('dashboard')" class="text-white  "
+        style="text-decoration: none; border: none; ">
+        <div class="danger " style="padding: 12px; color:pink;"> <i
+                class="fa-solid fa-table-list"></i>
+            {{ 'List Testimonial' }}
+        </div>
+    </x-nav-link>
+</nav>
+</div>
+
+<!-- ... Continue with your other menu items ... -->
+
 
             </div>
         </div>

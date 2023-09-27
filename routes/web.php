@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ContactController;  
 use App\Http\Controllers\UserEnquiryController;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';  
-Route::get('/page2', [RouteController::class, 'page2'])->name('page2');
-Route::get('/page3', [RouteController::class, 'page3'])->name('page3');
-
+ 
 Route::get('/users', [RouteController::class, 'users'])->name('users');
 
 Route::get('/home', [RouteController::class, 'home'])->name('home');
@@ -36,8 +35,10 @@ Route::get('/contactform', [ContactController::class, 'contactform'])->name('con
 Route::post('/contactform', [ContactController::class, 'store'])->name('contactform'); 
 Route::get('/contacttable', [ContactController::class, 'contacttable'])->name('contact_table');
 
-Route::get('/testimonial', [RouteController::class, 'testimonial'])->name('testimonial');
- 
+Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testimonial'); 
+Route::post('/testimonial', [TestimonialController::class, 'store'])->name('add_testimonial');
+Route::get('/show_testimonial', [TestimonialController::class, 'show'])->name('show_testimonial');
+
 // Route::get('/addcat', [RouteController::class, 'addcat'])->name('addcat');
 // Route::post('/addcat', [RouteController::class, 'storeCategory'])->name('storeCategory');
 // Route::get('/catlist', [RouteController::class, 'catlist'])->name('catlist');

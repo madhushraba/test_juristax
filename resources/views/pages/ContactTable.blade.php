@@ -36,7 +36,8 @@
                             <div>{{ Auth::user()->name }}</div>
                         @endauth
                     </td>
-                    <td>{{ Auth::user()->email }}</td>
+                    {{-- <td>{{ Auth::user()->email }}</td> --}}
+                    <td>ymail</td>
                     <td>64364756</td>
                     <td>data5757</td>
                 </tr>

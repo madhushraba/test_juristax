@@ -21,7 +21,7 @@ class ContactController extends Controller
     }
     public function store()
     {
-        
+        //postreq data storage , yet to complete
 
         return view('pages.Addcat',
         //  ['categories' => $categories]
