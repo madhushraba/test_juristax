@@ -61,9 +61,9 @@ class CategoryController extends Controller
 
     public function show()
     {
-        $category = Category::all();
+        $categories = Category::all();
     
-        return view('pages.Catlist', ['category' => $category]);
+        return view('pages.Catlist', ['categories' => $categories]);
     }
 
     // public function edit(Category $category)

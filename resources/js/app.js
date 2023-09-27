@@ -6,5 +6,5 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-// require('jquery');
+require('jquery');
 // require('datatables.net-dt');

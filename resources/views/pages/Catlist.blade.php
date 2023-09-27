@@ -10,12 +10,12 @@
             </tr> 
         </thead>
         <tbody>
-            {{-- @foreach($categories as $category) --}}
+            @foreach($categories as $category)
             <tr>
-                {{-- <td>{{ $category->name }}</td> --}}
-                <td>438597</td>
+                <td>{{ $category->name }}</td>
+                {{-- <td>438597</td> --}}
             </tr>
-            {{-- @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 </div>

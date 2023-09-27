@@ -14,8 +14,9 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> --}}
 </head>
 
 <body class="font-sans antialiased">
@@ -37,14 +38,15 @@
             {{ $slot }}
         </main>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 
     <!-- Add jQuery from a CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 
     <!-- Add DataTables CSS and JS from a CDN -->
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-
+    {{-- <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> --}}
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/dataTables.bootstrap4.min.js') }}"></script>
 </body>
 
 </html>

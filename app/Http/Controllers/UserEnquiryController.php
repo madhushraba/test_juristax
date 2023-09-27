@@ -25,7 +25,7 @@ class UserEnquiryController extends Controller
         ]);
 
         // Create a new UserEnquiry instance and save it to the database
-        UserEnquiry::create($validatedData);
+        UserEnquiry::create($validatedData); 
 
         // Redirect back to the form with a success message
         return redirect()->back()->with('success', 'Enquiry submitted successfully');
