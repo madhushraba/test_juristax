@@ -5,7 +5,7 @@
          @auth
              <h1>Welcome,
                  @auth
-                     <span style="padding: 12px; color:rgb(236, 3, 42);">{{ Auth::user()->email }}</span>
+                     <span style="padding: 12px; color:rgb(236, 3, 42);">{{ Auth::user()->name }}</span>
                  @endauth
 
 
